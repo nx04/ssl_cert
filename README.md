@@ -49,3 +49,15 @@ dig -t txt _acme-challenge.yourdomain.com @8.8.8.8
 ;; ANSWER SECTION:
 _acme-challenge.yourdomain.com. 599	IN	TXT	"hkh6BT7jERHEDzPORxBQ*************4ebhA"
 ```
+
+## 证书存储路径：
+```
+cd /etc/letsencrypt/live
+```
+
+证书文件
+```
+ssl_certificate   /etc/letsencrypt/live/www.domain.com/fullchain.pem;
+ssl_certificate_key  /etc/letsencrypt/live/www.domain.com/privkey.pem;
+```
+
