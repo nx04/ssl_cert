@@ -36,18 +36,17 @@ sudo certbot certonly -d test.yourdomain.com --manual --preferred-challenges dns
 
 ## 新打开一个 ssh 窗口，输入下列命令确认 TXT 记录是否生效：
 ```
-dig -t txt _acme-challenge.yourdomain.com @8.8.8.8
+nslookup -qt=txt _acme-challenge.test.gytlfc.com
 ```
 
 ```
+服务器:  UnKnown
+Address:  26.26.26.53
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; QUESTION SECTION:
-;_acme-challenge.yourdomain.com.	IN	TXT
+非权威应答:
+_acme-challenge.test.gytlfc.com text =
 
-;; ANSWER SECTION:
-_acme-challenge.yourdomain.com. 599	IN	TXT	"hkh6BT7jERHEDzPORxBQ*************4ebhA"
+        "mf8cT3Y-q1OEeYxAncQVmvXXRyArGKTJ3JRAziaBwI4"
 ```
 
 ## 证书存储路径：
