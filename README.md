@@ -1,26 +1,25 @@
-安装 Certbot
-先安装 EPEL 仓库（因为 certbot 在这个源里，目前还没在默认的源里）
+## 安装 Certbot
+1、先安装 EPEL 仓库（因为 certbot 在这个源里，目前还没在默认的源里）
 
 ```
 sudo yum install epel-release
 ```
 
-安装 certbot
+2、安装 certbot
 ```
 sudo yum install certbot
-
 ```
 
-查看 certbot 版本，因为 ACME v2 要在 certbot 0.20.0 以后的版本支持。
+3、查看 certbot 版本，因为 ACME v2 要在 certbot 0.20.0 以后的版本支持。
 
 ```
 certbot --version
 ```
 
-certbot 1.11.0
+输出：certbot 1.11.0
 
-申请证书
-申请通配符证书命令如下
+## 申请证书
+申请命令如下
 
 ```
 sudo certbot certonly -d test.yourdomain.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory
