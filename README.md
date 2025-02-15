@@ -34,7 +34,7 @@ sudo certbot certonly -d test.yourdomain.com --manual --preferred-challenges dns
 
 此时去 DNS 服务商那里，配置 _acme-challenge.yourdomain.com 类型为 TXT 的记录。在没有确认 TXT 记录生效之前不要回车执行。
 
-## 新打开一个 ssh 窗口，输入下列命令确认 TXT 记录是否生效：
+## CMD 窗口，输入下列命令确认 TXT 记录是否生效：
 ```
 nslookup -qt=txt _acme-challenge.test.gytlfc.com
 ```
