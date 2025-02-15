@@ -32,3 +32,20 @@ sudo certbot certonly -d test.yourdomain.com --manual --preferred-challenges dns
 - –preferred-challenges dns，使用 DNS 方式校验域名所有权。
 - 注意：通配符证书只能使用 dns-01 这种方式申请。
 
+此时去 DNS 服务商那里，配置 _acme-challenge.yourdomain.com 类型为 TXT 的记录。在没有确认 TXT 记录生效之前不要回车执行。
+
+## 新打开一个 ssh 窗口，输入下列命令确认 TXT 记录是否生效：
+```
+dig -t txt _acme-challenge.yourdomain.com @8.8.8.8
+```
+
+```
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;_acme-challenge.yourdomain.com.	IN	TXT
+
+;; ANSWER SECTION:
+_acme-challenge.yourdomain.com. 599	IN	TXT	"hkh6BT7jERHEDzPORxBQ*************4ebhA"
+```
