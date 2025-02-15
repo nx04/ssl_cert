@@ -27,9 +27,9 @@ sudo certbot certonly -d test.yourdomain.com --manual --preferred-challenges dns
 ```
 主要参数说明：
 
-certonly 是 certbot 众多插件之一，您可以选择其他插件。
--d 为那些主机申请证书，如果是通配符，输入 *.yourdomain.com。
-注意：本文还申请了 yourdomain.com 这是为了避免通配符证书不匹配。
-–preferred-challenges dns，使用 DNS 方式校验域名所有权。
-注意：通配符证书只能使用 dns-01 这种方式申请。
+- certonly 是 certbot 众多插件之一，您可以选择其他插件。
+- -d 为那些主机申请证书，如果是通配符，输入 *.yourdomain.com。
+- 注意：本文还申请了 yourdomain.com 这是为了避免通配符证书不匹配。
+- –preferred-challenges dns，使用 DNS 方式校验域名所有权。
+- 注意：通配符证书只能使用 dns-01 这种方式申请。
 
